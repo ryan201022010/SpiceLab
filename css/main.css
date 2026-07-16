@@ -1,0 +1,49 @@
+body * {
+    font-size: 18px;
+    font-family: Consolas;
+}
+
+h1 {
+    color: #546d78 !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+}
+
+h2 {
+    color: #4051b5 !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+
+h3 {
+    color: #3b86b6 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+em {
+    color: #d4362b;
+    font-style: normal;
+}
+
+.linenos,
+pre code {
+    font-size: 18px !important;
+}
+
+.linenodiv * {
+    font-size: 18px !important;
+}
+
+p,
+li {
+    font-size: 18px !important;
+}
+
+li code {
+    font-size: 18px !important;
+}
+
+table * {
+    font-size: 18px !important;
+}
