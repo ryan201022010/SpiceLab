@@ -1,8 +1,10 @@
-body * {
+/* 1. 將通配符改為針對整個 body 設定字型與基本字級，不影響內部元件結構 */
+body {
     font-size: 18px;
-    font-family: Consolas;
+    font-family: Consolas, monospace;
 }
 
+/* 2. 標題樣式 */
 h1 {
     color: #546d78 !important;
     font-size: 28px !important;
@@ -26,24 +28,33 @@ em {
     font-style: normal;
 }
 
-.linenos,
-pre code {
-    font-size: 18px !important;
-}
-
-.linenodiv * {
-    font-size: 18px !important;
-}
-
+/* 3. 程式碼區塊、列表、表格與段落字級 */
 p,
-li {
+span,
+li,
+li code,
+.linenos,
+pre code,
+.linenodiv *,
+table {
     font-size: 18px !important;
 }
 
-li code {
-    font-size: 18px !important;
+.item-title {
+    color:#006d75;
+    font-weight: bold;
 }
 
-table * {
-    font-size: 18px !important;
+/* 4. 專門還原 MathJax 元件的字級與容器，防止被全局樣式干擾 */
+mjx-container, 
+mjx-container * {
+    font-size: auto; /* 讓 MathJax 自行接管內部元件大小 */
+}
+
+mjx-container mjx-lin {
+    padding: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    background: transparent !important;
+    border-top: 0.065em solid !important;
 }
